@@ -2,7 +2,7 @@ import k6utils from 'k6/x/k6utils';
 
 export default function () {
   const data = k6utils.load('data.csv', ',');
-
+  console.log(`test: ${data[0]}`);
   console.log(`Rows: ${data[0]}`);
   console.log(`Should have two rows: ${data.length === 2}`);
   console.log(`Random row: ${JSON.stringify(k6utils.takeRandomRow())}`)
